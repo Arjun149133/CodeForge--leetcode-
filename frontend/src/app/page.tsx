@@ -1,5 +1,9 @@
+"use client";
+import { useSession } from "next-auth/react";
+
 const page = () => {
-  return <div>page</div>;
+  const session = useSession();
+  return <div>{JSON.stringify(session)}</div>;
 };
 
 export default page;
